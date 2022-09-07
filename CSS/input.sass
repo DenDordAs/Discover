@@ -1,7 +1,6 @@
-@mixin ul()
+@mixin dj()
     display: flex
     justify-content: space-between
-    list-style-type: none
 
 *
     margin: 0
@@ -12,27 +11,68 @@ body
     background-color: #1F1D2B
 
 header
-    // background-image: url(../Img/background\ header.jpg)
-    // background-repeat: no-repeat
-    // background-size: cover
-    // background-position: right
+    background-image: url(../Img/header\ fonts.svg)
+
+    background-repeat: no-repeat
+    background-position-x: 93%
+
+h1
+    font-weight: 600
+    font-size: 72px
+    line-height: 82px
+    /* or 114% */
+    letter-spacing: -2px
+    color: #FFFFFF
+
+h2
+    font-weight: 500
+    font-size: 48px
+    line-height: 72px
+    /* identical to box height, or 150% */
+    letter-spacing: -1px
+    color: #FFFFFF
+
+h3
+    font-weight: 600
+    font-size: 24px
+    line-height: 36px
+    /* identical to box height, or 150% */
+    letter-spacing: -1px
+    color: #D7D7D7
+
+h4
+    font-weight: 600
+    font-size: 16px
+    line-height: 24px
+    /* identical to box height, or 150% */
+    color: #FFFFFF
+
 
 .container
     max-width: 1295px
     margin: 0 auto
 
 .header_menu
-    display: flex
-    justify-content: space-between
+    @include dj
+    align-items: center
+    padding-top: 20px
 
-    nav
+    >a
         display: flex
-        justify-content: space-between
+        align-items: center
+    nav
+        @include dj
         gap: 264px
     
 .menu
-    @include ul
+    @include dj
+    list-style-type: none
     gap: 32px
+
+    li
+        display: flex
+        justify-content: center
+        align-items: center
 
     a
         font-weight: 500
@@ -43,9 +83,10 @@ header
         text-transform: uppercase
         color: #BCBCBC
         text-decoration: none
-        transition: 1s
+        transition: .3s
+
     a:hover
-        transition: 1s
+        transition: .3s
         letter-spacing: 1.5px
         text-transform: uppercase
         /* Linear Purple Blue Style */
@@ -53,6 +94,239 @@ header
         -webkit-background-clip: text
         -webkit-text-fill-color: transparent
         background-clip: text
-        
+        border-bottom: solid #9B51E0 1px 
 
+.profile_menu
+    @include dj
 
+    button
+        display: flex
+        background: none
+        border-radius: 10px
+        border: none
+
+    a
+        font-weight: 500
+        font-size: 12px
+        line-height: 22px
+        /* identical to box height, or 183% */
+        letter-spacing: 1.5px
+        text-transform: uppercase
+        color: #BCBCBC
+        text-decoration: none
+        padding: 12px 36px
+        transition: .3s
+
+    a:hover
+        color: #FFF
+        transition: .3s
+
+    .profile_menu_create
+        a
+            border: 1px solid #D7D7D7
+            border-radius: 10px
+
+        a:hover
+            border: 1px solid #FFF
+
+.header_content
+    @include dj
+    margin-top: 159px
+
+    .header_text
+        margin-top: 13px 
+        display: flex
+        flex-direction: column
+        max-width: 637px
+        width: 100%
+
+        p
+            font-weight: 400
+            font-size: 24px
+            line-height: 36px
+            /* or 150% */
+            letter-spacing: 0.5px
+            color: #E2E2E2
+            margin: 24px 0 32px 0
+
+        .header_text_button
+            display: flex
+            gap: 40px
+
+            button
+                border: none
+                background: none
+                display: flex
+                border-radius: 16px
+
+            a
+                font-weight: 600
+                font-size: 24px
+                line-height: 36px
+                /* identical to box height, or 150% */
+                letter-spacing: -1px
+                color: #D7D7D7
+                padding: 12px 67px
+                border: 1px solid #D7D7D7
+                border-radius: 16px
+                text-decoration: none
+
+            a:hover
+                background: linear-gradient(103.91deg, #9B51E0 21.01%, rgba(48, 129, 237, 0.8) 100%)
+                border-radius: 16px
+                border: none
+                padding: 13px 68px
+
+    .header_link
+        background: linear-gradient(169.44deg, rgba(58, 129, 191, 0.08) 1.85%, rgba(65, 48, 90, 0.08) 98.72%)
+        backdrop-filter: blur(1110px)
+        /* Note: backdrop-filter has minimal browser support */
+        border-radius: 35.0246px
+        box-sizing: border-box
+
+        .header_link_content
+            padding: 28px 24px
+
+            img
+                border-radius: 20px
+            
+            .link_content_peaple
+                @include dj
+                margin-top: 32px
+
+                .peaple_content
+                    display: flex
+                    align-items: flex-start
+                    gap: 12px
+
+                    img
+                        border-radius: 50px
+                        width: 56px
+
+                    .peaple_text
+                        display: flex
+                        flex-direction: column
+                        gap: 4px
+
+                        p
+                            font-weight: 500
+                            font-size: 16px
+                            line-height: 24px
+                            /* identical to box height, or 150% */
+                            color: #D7D7D7
+
+                .peaple_we_are
+                    display: flex
+                    flex-direction: column
+                    align-items: flex-end
+                    gap: 4px
+
+                    a
+                        font-weight: 600
+                        font-size: 16px
+                        line-height: 24px
+                        /* identical to box height, or 150% */
+                        color: #FFFFFF
+                        text-decoration: none   
+
+                    .peaple_like
+                        display: flex
+                        gap: 9px
+
+                        p
+                            font-weight: 500
+                            font-size: 16px
+                            line-height: 24px
+                            /* identical to box height, or 150% */
+                            color: #D7D7D7
+
+.hot_auctions
+    padding-top: 140px
+
+    .hot_auctions_content
+        .hot_auctions_title
+            @include dj
+
+            .button_view
+                display: flex
+                align-items: flex-end
+
+                a
+                    display: flex
+                    gap: 15px
+                    text-decoration: none
+                    transition: .3s
+                    padding: 0 15px
+
+                a:hover
+                    transition: .3s
+                    background-color: rgba(145, 137, 150, 0.4)
+
+    .hot_auctions_lists
+        display: flex
+        justify-content: space-evenly
+        gap: 80px 29px
+        list-style-type: none
+        margin-top: 40px
+        flex-wrap: wrap
+
+        li
+            max-width: 300px
+            width: 100%
+
+            img
+                border-radius: 10px
+            
+            .name_lots
+                @include dj
+                margin-top: 24px 
+
+                p
+                    font-weight: 500
+                    font-size: 16px
+                    line-height: 24px
+                    /* identical to box height, or 150% */
+                    color: #FFFFFF
+            .line
+                width: 100%
+                height: 2px
+                background-color: #918181
+                margin: 16px 0 25px 0
+
+            .time_bid
+                @include dj
+                align-items: center
+
+                p
+                    font-weight: 400
+                    font-size: 16px
+                    line-height: 24px
+                    /* identical to box height, or 150% */
+                    color: #BCBCBC
+
+                    span
+                        font-weight: 400
+                        font-size: 16px
+                        line-height: 24px
+                        color: #fff
+
+                button
+                    display: flex
+                    background: none
+                    border: none
+                    border-radius: 8px
+
+                    a
+                        padding: 3px 24px
+                        font-weight: 500
+                        font-size: 16px
+                        line-height: 24px
+                        /* identical to box height, or 150% */
+                        color: #E2E2E2
+                        text-decoration: none
+                        border: 1px solid #E2E2E2
+                        border-radius: 8px
+                        transition: .3s
+
+                    a:hover
+                        color: #FFF
