@@ -1,3 +1,46 @@
+.discover .discover_lists, .hot_auctions .hot_auctions_lists {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 80px 29px;
+  list-style-type: none;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.discover .discover_lists li .time_bid p span, .hot_auctions .hot_auctions_lists li .time_bid p span {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+}
+
+.discover .discover_lists li .time_bid button, .hot_auctions .hot_auctions_lists li .time_bid button {
+  display: flex;
+  background: none;
+  border: none;
+  border-radius: 8px;
+}
+
+.discover .discover_lists li .time_bid button a, .hot_auctions .hot_auctions_lists li .time_bid button a {
+  padding: 3px 24px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  color: #E2E2E2;
+  text-decoration: none;
+  border: 1px solid #E2E2E2;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.discover .discover_lists li .time_bid p, .discover .discover_lists li .name_lots p, .hot_auctions .hot_auctions_lists li .name_lots p, .header_content .header_link .header_link_content .link_content_peaple .peaple_we_are .peaple_like p, .header_content .header_link .header_link_content .link_content_peaple .peaple_we_are a, .header_content .header_link .header_link_content .link_content_peaple .peaple_content .peaple_text p, h4 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -43,10 +86,14 @@ h3 {
 
 h4 {
   font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
-  /* identical to box height, or 150% */
   color: #FFFFFF;
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: #918181;
+  margin: 16px 0 25px 0;
 }
 
 .container {
@@ -164,10 +211,13 @@ h4 {
   gap: 40px;
 }
 .header_content .header_text .header_text_button button {
-  border: none;
   background: none;
   display: flex;
   border-radius: 16px;
+  border: none;
+}
+.header_content .header_text .header_text_button button:hover {
+  background: linear-gradient(103.91deg, #9B51E0 21.01%, rgba(48, 129, 237, 0.8) 100%);
 }
 .header_content .header_text .header_text_button a {
   font-weight: 600;
@@ -182,8 +232,6 @@ h4 {
   text-decoration: none;
 }
 .header_content .header_text .header_text_button a:hover {
-  background: linear-gradient(103.91deg, #9B51E0 21.01%, rgba(48, 129, 237, 0.8) 100%);
-  border-radius: 16px;
   border: none;
   padding: 13px 68px;
 }
@@ -220,10 +268,6 @@ h4 {
   gap: 4px;
 }
 .header_content .header_link .header_link_content .link_content_peaple .peaple_content .peaple_text p {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  /* identical to box height, or 150% */
   color: #D7D7D7;
 }
 .header_content .header_link .header_link_content .link_content_peaple .peaple_we_are {
@@ -234,9 +278,6 @@ h4 {
 }
 .header_content .header_link .header_link_content .link_content_peaple .peaple_we_are a {
   font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
-  /* identical to box height, or 150% */
   color: #FFFFFF;
   text-decoration: none;
 }
@@ -244,11 +285,11 @@ h4 {
   display: flex;
   gap: 9px;
 }
+.header_content .header_link .header_link_content .link_content_peaple .peaple_we_are .peaple_like a {
+  display: flex;
+  align-items: center;
+}
 .header_content .header_link .header_link_content .link_content_peaple .peaple_we_are .peaple_like p {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  /* identical to box height, or 150% */
   color: #D7D7D7;
 }
 
@@ -274,14 +315,6 @@ h4 {
   transition: 0.3s;
   background-color: rgba(145, 137, 150, 0.4);
 }
-.hot_auctions .hot_auctions_lists {
-  display: flex;
-  justify-content: space-evenly;
-  gap: 80px 29px;
-  list-style-type: none;
-  margin-top: 40px;
-  flex-wrap: wrap;
-}
 .hot_auctions .hot_auctions_lists li {
   max-width: 300px;
   width: 100%;
@@ -295,17 +328,7 @@ h4 {
   margin-top: 24px;
 }
 .hot_auctions .hot_auctions_lists li .name_lots p {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  /* identical to box height, or 150% */
   color: #FFFFFF;
-}
-.hot_auctions .hot_auctions_lists li .line {
-  width: 100%;
-  height: 2px;
-  background-color: #918181;
-  margin: 16px 0 25px 0;
 }
 .hot_auctions .hot_auctions_lists li .time_bid {
   display: flex;
@@ -319,31 +342,128 @@ h4 {
   /* identical to box height, or 150% */
   color: #BCBCBC;
 }
-.hot_auctions .hot_auctions_lists li .time_bid p span {
+.hot_auctions .hot_auctions_lists li .time_bid button a:hover {
+  color: #FFF;
+}
+
+.getting_started {
+  padding-top: 164px;
+  background-image: url(../Img/font_getting_started.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.getting_started .getting_started_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.getting_started .getting_started_content > p {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  /* identical to box height, or 150% */
+  letter-spacing: 0.5px;
+  color: #E2E2E2;
+  margin: 24px 0 80px 0;
+}
+.getting_started .getting_started_content .getting_started_lists {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  width: 100%;
+}
+.getting_started .getting_started_content .getting_started_lists li {
+  max-width: 179px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.getting_started .getting_started_content .getting_started_lists li div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 138px;
+  background: rgba(255, 255, 255, 0.095);
+  box-shadow: inset 2.01px -2.01px 20px rgba(214, 214, 214, 0.17), inset -3.01333px 3.01333px 3.01333px rgba(255, 255, 255, 0.39);
+  backdrop-filter: blur(74.4293px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 26px;
+}
+.getting_started .getting_started_content .getting_started_lists li p {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
+  /* or 150% */
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.discover {
+  padding-top: 160px;
+}
+.discover h3 {
   color: #fff;
 }
-.hot_auctions .hot_auctions_lists li .time_bid button {
+.discover .discover_filter {
   display: flex;
-  background: none;
-  border: none;
-  border-radius: 8px;
+  justify-content: space-between;
+  align-items: center;
 }
-.hot_auctions .hot_auctions_lists li .time_bid button a {
-  padding: 3px 24px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  /* identical to box height, or 150% */
-  color: #E2E2E2;
+.discover .discover_filter .discover_filter_menu {
+  display: flex;
+  gap: 41px;
+}
+.discover .discover_filter .discover_filter_menu a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   text-decoration: none;
-  border: 1px solid #E2E2E2;
-  border-radius: 8px;
-  transition: 0.3s;
 }
-.hot_auctions .hot_auctions_lists li .time_bid button a:hover {
+.discover .discover_filter .discover_filter_menu button {
+  display: flex;
+  background: linear-gradient(93.51deg, #9B51E0 2.84%, #3081ED 99.18%);
+  border-radius: 10px;
+  border: none;
+}
+.discover .discover_filter .discover_filter_menu button a {
+  padding: 6px 41px;
+  border-radius: 10px;
+}
+.discover .discover_filter .discover_filter_menu button a:hover {
+  padding: 4px 40px;
+  border: 1px solid #D7D7D7;
+}
+.discover .discover_filter .discover_filter_menu button:hover {
+  background: none;
+}
+.discover .discover_lists li {
+  max-width: 300px;
+  width: 100%;
+}
+.discover .discover_lists li img {
+  border-radius: 10px;
+}
+.discover .discover_lists li .name_lots {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+.discover .discover_lists li .name_lots p {
+  color: #FFFFFF;
+}
+.discover .discover_lists li .time_bid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.discover .discover_lists li .time_bid p {
+  font-weight: 400;
+  color: #BCBCBC;
+}
+.discover .discover_lists li .time_bid button a:hover {
   color: #FFF;
 }
 
