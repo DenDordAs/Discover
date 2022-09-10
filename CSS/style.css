@@ -7,21 +7,21 @@
   flex-wrap: wrap;
 }
 
-.discover .discover_lists li .time_bid p span, .hot_auctions .hot_auctions_lists li .time_bid p span {
+.discover .discover_lists li .time_buy_and_bid p span, .hot_auctions .hot_auctions_lists li .time_bid p span {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   color: #fff;
 }
 
-.discover .discover_lists li .time_bid button, .hot_auctions .hot_auctions_lists li .time_bid button {
+.discover .discover_lists li .time_buy_and_bid button, .hot_auctions .hot_auctions_lists li .time_bid button {
   display: flex;
   background: none;
   border: none;
   border-radius: 8px;
 }
 
-.discover .discover_lists li .time_bid button a, .hot_auctions .hot_auctions_lists li .time_bid button a {
+.discover .discover_lists li .time_buy_and_bid button a, .hot_auctions .hot_auctions_lists li .time_bid button a {
   padding: 3px 24px;
   font-weight: 500;
   font-size: 16px;
@@ -34,7 +34,7 @@
   transition: 0.3s;
 }
 
-.discover .discover_lists li .time_bid p, .discover .discover_lists li .name_lots p, .hot_auctions .hot_auctions_lists li .name_lots p, .header_content .header_link .header_link_content .link_content_peaple .peaple_we_are .peaple_like p, .header_content .header_link .header_link_content .link_content_peaple .peaple_we_are a, .header_content .header_link .header_link_content .link_content_peaple .peaple_content .peaple_text p, h4 {
+.discover .discover_lists li .time_buy_and_bid p, .discover .discover_lists li .name_lots p, .hot_auctions .hot_auctions_lists li .name_lots p, .header_content .header_link .header_link_content .link_content_peaple .peaple_we_are .peaple_like p, .header_content .header_link .header_link_content .link_content_peaple .peaple_we_are a, .header_content .header_link .header_link_content .link_content_peaple .peaple_content .peaple_text p, h4 {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
@@ -369,6 +369,8 @@ h4 {
 .getting_started .getting_started_content .getting_started_lists {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 20px 0;
   list-style-type: none;
   width: 100%;
 }
@@ -439,6 +441,9 @@ h4 {
 .discover .discover_filter .discover_filter_menu button:hover {
   background: none;
 }
+.discover .discover_lists {
+  margin-top: 87px;
+}
 .discover .discover_lists li {
   max-width: 300px;
   width: 100%;
@@ -454,17 +459,117 @@ h4 {
 .discover .discover_lists li .name_lots p {
   color: #FFFFFF;
 }
-.discover .discover_lists li .time_bid {
+.discover .discover_lists li .time_buy_and_bid {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.discover .discover_lists li .time_bid p {
+.discover .discover_lists li .time_buy_and_bid p {
   font-weight: 400;
   color: #BCBCBC;
 }
-.discover .discover_lists li .time_bid button a:hover {
+.discover .discover_lists li .time_buy_and_bid button a:hover {
   color: #FFF;
+}
+.discover .load_more {
+  margin-top: 81px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.discover .load_more .load_more_button {
+  display: flex;
+  background: none;
+  border-radius: 10px;
+  border: none;
+}
+.discover .load_more .load_more_button a {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 22px;
+  /* identical to box height, or 183% */
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #BCBCBC;
+  text-decoration: none;
+  padding: 12px 40px;
+  border: 1px solid #D7D7D7;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.discover .load_more .load_more_button a:hover {
+  color: #FFF;
+  border: 1px solid #FFF;
+  transition: 0.3s;
+}
+
+footer {
+  padding: 160px 0 98px 0;
+}
+footer h2 {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 60px;
+  color: #FFFFFF;
+  max-width: 440px;
+}
+footer .footer_content {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer_content > ul {
+  display: flex;
+  list-style-type: none;
+  flex-wrap: wrap;
+  gap: 41px;
+}
+footer .footer_content > ul h2 {
+  font-weight: 400;
+}
+footer .footer_content > ul li {
+  display: flex;
+  flex-direction: column;
+}
+footer .footer_content > ul li .links {
+  margin-top: 40px;
+  display: flex;
+  gap: 32px;
+  flex-direction: column;
+  list-style-type: none;
+}
+footer .footer_content > ul li .links a {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  /* identical to box height */
+  letter-spacing: 0.03em;
+  color: #D7D7D7;
+  text-decoration: none;
+}
+footer .line {
+  margin: 40px 0;
+}
+footer .copyright {
+  display: flex;
+  justify-content: space-between;
+}
+footer .copyright h3 {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  /* identical to box height */
+  /* Gray 3 */
+  color: #828282;
+}
+footer .copyright .copyright_contact {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+footer .copyright .copyright_contact a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=style.css.map */

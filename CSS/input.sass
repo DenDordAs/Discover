@@ -365,6 +365,8 @@ h4
         .getting_started_lists
             display: flex
             justify-content: space-evenly
+            flex-wrap: wrap
+            gap: 20px 0
             list-style-type: none
             width: 100%
 
@@ -437,6 +439,7 @@ h4
 
     .discover_lists
         @extend %action_list
+        margin-top: 87px
 
         li
             max-width: 300px
@@ -453,7 +456,7 @@ h4
                     @extend %font_16_and_line_24
                     color: #FFFFFF
 
-            .time_bid
+            .time_buy_and_bid
                 @include dj
                 align-items: center
 
@@ -473,3 +476,99 @@ h4
 
                     a:hover
                         color: #FFF
+    .load_more
+        margin-top: 81px
+        display: flex
+        justify-content: center
+        align-items: center
+
+        .load_more_button
+            display: flex
+            background: none
+            border-radius: 10px
+            border: none
+
+            a
+                font-weight: 500
+                font-size: 12px
+                line-height: 22px
+                /* identical to box height, or 183% */
+                letter-spacing: 1.5px
+                text-transform: uppercase
+                color: #BCBCBC
+                text-decoration: none
+                padding: 12px 40px
+                border: 1px solid #D7D7D7
+                border-radius: 10px
+                transition: .3s
+
+            a:hover
+                color: #FFF
+                border: 1px solid #FFF
+                transition: .3s
+
+footer
+    padding: 160px 0 98px 0
+
+    h2
+        font-weight: 500
+        font-size: 40px
+        line-height: 60px
+        color: #FFFFFF
+        max-width: 440px
+
+    .footer_content
+        @include dj
+
+        >ul
+            display: flex
+            list-style-type: none
+            flex-wrap: wrap
+            gap: 41px
+
+            h2
+                font-weight: 400
+
+            li
+                display: flex
+                flex-direction: column
+
+                .links
+                    margin-top: 40px 
+                    display: flex
+                    gap: 32px
+                    flex-direction: column
+                    list-style-type: none
+
+                    a
+                        font-weight: 400
+                        font-size: 24px
+                        line-height: 36px
+                        /* identical to box height */
+                        letter-spacing: 0.03em
+                        color: #D7D7D7
+                        text-decoration: none
+    
+    .line
+        margin: 40px 0
+
+    .copyright
+        @include dj
+
+        h3
+            font-weight: 400
+            font-size: 24px
+            line-height: 36px
+            /* identical to box height */
+            /* Gray 3 */
+            color: #828282
+
+        .copyright_contact
+            display: flex
+            gap: 25px
+            align-items: center
+
+            a
+                display: flex
+                align-items: center
+                justify-content: center
