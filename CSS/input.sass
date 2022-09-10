@@ -48,11 +48,11 @@
 body
     background-color: #1F1D2B
 
-header
-    background-image: url(../Img/header\ fonts.svg)
+// header
+//     background-image: url(../Img/header\ fonts.svg)
 
-    background-repeat: no-repeat
-    background-position-x: 93%
+//     background-repeat: no-repeat
+//     background-position-x: 93%
 
 h1
     font-weight: 600
@@ -162,185 +162,462 @@ h4
         color: #FFF
         transition: .3s
 
-    .profile_menu_create
-        a
-            border: 1px solid #D7D7D7
-            border-radius: 10px
+.profile_menu_create
+    a
+        border: 1px solid #D7D7D7
+        border-radius: 10px
 
-        a:hover
-            border: 1px solid #FFF
+    a:hover
+        border: 1px solid #FFF
 
 .header_content
     @include dj
     margin-top: 159px
 
-    .header_text
-        margin-top: 13px 
+.header_text
+    margin-top: 13px 
+    display: flex
+    flex-direction: column
+    max-width: 637px
+    width: 100%
+
+    p
+        font-weight: 400
+        font-size: 24px
+        line-height: 36px
+        /* or 150% */
+        letter-spacing: 0.5px
+        color: #E2E2E2
+        margin: 24px 0 32px 0
+
+.header_text_button
+    display: flex
+    gap: 40px
+
+    button
+        background: none
         display: flex
-        flex-direction: column
-        max-width: 637px
-        width: 100%
+        border-radius: 16px
+        border: none
+        
+
+    button:hover
+        background: linear-gradient(103.91deg, #9B51E0 21.01%, rgba(48, 129, 237, 0.8) 100%)
+
+    a
+        font-weight: 600
+        font-size: 24px
+        line-height: 36px
+        /* identical to box height, or 150% */
+        letter-spacing: -1px
+        color: #D7D7D7
+        padding: 12px 67px
+        border: 1px solid #D7D7D7
+        border-radius: 16px
+        text-decoration: none
+
+    a:hover
+        border: none
+        padding: 13px 68px        
+
+.header_link
+    background: linear-gradient(169.44deg, rgba(58, 129, 191, 0.08) 1.85%, rgba(65, 48, 90, 0.08) 98.72%)
+    backdrop-filter: blur(1110px)
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 35.0246px
+    box-sizing: border-box
+    border: 0.88px solid
+    border-image-source: linear-gradient(168.82deg, #FB37FF 1.7%, rgba(155, 111, 238, 0) 27.12%, rgba(123, 127, 234, 0) 61.28%, #1BB2DE 99.52%)
+
+
+
+.header_link_content
+    padding: 28px 24px
+
+    >img
+        border-radius: 20px
+        max-width: 447px
+            
+.link_content_peaple
+    @include dj
+    margin-top: 32px
+
+.peaple_content
+    display: flex
+    align-items: flex-start
+    gap: 12px
+
+    img
+        border-radius: 50px
+        width: 56px
+
+.peaple_text
+    display: flex
+    flex-direction: column
+    gap: 4px
+
+    p
+        @extend %font_16_and_line_24
+        color: #D7D7D7
+
+.peaple_we_are
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    gap: 4px
+
+    a
+        font-weight: 600
+        @extend %font_16_and_line_24
+        color: #FFFFFF
+        text-decoration: none   
+
+.peaple_like
+    display: flex
+    gap: 9px
+
+    a
+        display: flex
+        align-items: center
+
+    p
+        @extend %font_16_and_line_24
+        color: #D7D7D7
+
+@media screen and (max-width:1366px)
+    .container
+        max-width: 1130px
+
+    .header_menu 
+        nav
+            gap: 120px
+
+    .header_content
+        margin-top: 125px
+
+    .header_link_content
+        padding: 22px 18px
+
+        >img
+            max-width: 400px
+
+    h1
+        font-size: 65px
+        line-height: 72px
+
+@media screen and (max-width:1230px)
+    .container
+        max-width: 1015px
+
+    .header_menu nav
+        gap: 85px
+
+    .menu
+        gap: 25px
+
+    .header_content
+        margin-top: 95px
+
+    .header_text
+        max-width: 473px
 
         p
-            font-weight: 400
-            font-size: 24px
-            line-height: 36px
-            /* or 150% */
-            letter-spacing: 0.5px
-            color: #E2E2E2
-            margin: 24px 0 32px 0
+            font-size: 18px
+            line-height: 28px
 
-        .header_text_button
-            display: flex
-            gap: 40px
+    .header_text_button a
+        font-size: 21px
+        line-height: 32px
+        padding: 10px 50px
 
-            button
-                background: none
-                display: flex
-                border-radius: 16px
-                border: none
-                
+    .header_link_content
+        padding: 22px 18px
 
-            button:hover
-                background: linear-gradient(103.91deg, #9B51E0 21.01%, rgba(48, 129, 237, 0.8) 100%)
+        >img
+            max-width: 400px
 
-            a
-                font-weight: 600
-                font-size: 24px
-                line-height: 36px
-                /* identical to box height, or 150% */
-                letter-spacing: -1px
-                color: #D7D7D7
-                padding: 12px 67px
-                border: 1px solid #D7D7D7
-                border-radius: 16px
-                text-decoration: none
+    h1
+        font-size: 56px
+        line-height: 62px
 
-            a:hover
-                border: none
-                padding: 13px 68px
+@media screen and (max-width:1100px)
+    .container
+        max-width: 870px
 
-    .header_link
-        background: linear-gradient(169.44deg, rgba(58, 129, 191, 0.08) 1.85%, rgba(65, 48, 90, 0.08) 98.72%)
-        backdrop-filter: blur(1110px)
-        /* Note: backdrop-filter has minimal browser support */
-        border-radius: 35.0246px
-        box-sizing: border-box
+    .header_menu nav
+        gap: 35px
 
-        .header_link_content
-            padding: 28px 24px
+    .menu
+        gap: 18px
 
-            img
-                border-radius: 20px
-            
-            .link_content_peaple
-                @include dj
-                margin-top: 32px
+    .profile_menu a
+        padding: 7px 24px
 
-                .peaple_content
-                    display: flex
-                    align-items: flex-start
-                    gap: 12px
+    .header_content
+        margin-top: 70px
 
-                    img
-                        border-radius: 50px
-                        width: 56px
+    .header_text
+        max-width: 400px
 
-                    .peaple_text
-                        display: flex
-                        flex-direction: column
-                        gap: 4px
+        p
+            font-size: 15px
+            line-height: 24px
 
-                        p
-                            @extend %font_16_and_line_24
-                            color: #D7D7D7
+    .header_text_button 
+        gap: 25px
 
-                .peaple_we_are
-                    display: flex
-                    flex-direction: column
-                    align-items: flex-end
-                    gap: 4px
+        a
+            font-size: 17px
+            line-height: 25px
+            padding: 8px 38px
 
-                    a
-                        font-weight: 600
-                        @extend %font_16_and_line_24
-                        color: #FFFFFF
-                        text-decoration: none   
+    .header_link_content
+        padding: 16px 14px
 
-                    .peaple_like
-                        display: flex
-                        gap: 9px
+        >img
+            max-width: 320px
 
-                        a
-                            display: flex
-                            align-items: center
+    h1
+        font-size: 43px
+        line-height: 50px
 
-                        p
-                            @extend %font_16_and_line_24
-                            color: #D7D7D7
+@media screen and (max-width:940px)
+    .container
+        max-width: 685px
+
+    .header_menu a img
+        width: 85px
+
+    .header_menu nav
+        gap: 35px
+
+    .menu
+        gap: 18px
+
+        a
+            font-size: 10px
+
+    .profile_menu a
+        padding: 4px 20px
+        font-size: 10px
+
+    .header_content
+        margin-top: 50px
+
+    .header_text
+        max-width: 320px
+
+        p
+            font-size: 12px
+            line-height: 20px
+
+    .header_text_button 
+        gap: 25px
+
+        a
+            font-size: 12px
+            line-height: 18px
+            padding: 6px 27px
+
+    .header_link_content
+        padding: 16px 14px
+
+        >img
+            max-width: 250px
+
+    .link_content_peaple
+        margin-top: 14px 
+
+    .peaple_content img
+        width: 40px
+
+    .peaple_text p
+        font-size: 10px
+        line-height: 16px
+
+    .peaple_we_are a
+        font-size: 10px
+        line-height: 16px
+
+    .peaple_like 
+        img
+            width: 16px
+
+        p
+            font-size: 11px
+            line-height: 16px
+
+    h1
+        font-size: 39px
+        line-height: 40px
+
+    h4
+        font-size: 11px
+        line-height: 16px
+
+@media screen and (max-width:740px)
+    .container
+        max-width: 560px
+
+    .header_menu a img
+        width: 85px
+
+    .header_menu nav
+        gap: 35px
+
+    .menu
+        gap: 8px
+
+        a
+            font-size: 9px
+
+    .profile_menu a
+        padding: 1px 14px
+        font-size: 9px
+
+    .header_content
+        margin-top: 30px
+        justify-content: space-evenly
+
+    .header_text
+        max-width: 285px
+
+        p
+            font-size: 13px
+            line-height: 16px
+            margin: 10px 0 14px 0
+
+    .header_text_button 
+        gap: 15px
+
+        a
+            font-size: 14px
+            line-height: 16px
+            padding: 7px 24px
+
+    .header_link_content
+        padding: 11px 10px
+
+        >img
+            max-width: 210px
+
+    .link_content_peaple
+        margin-top: 4px 
+
+    .peaple_content 
+        gap: 6px
+
+        img
+            width: 30px
+
+    .peaple_text p
+        font-size: 8px
+        line-height: 10px
+
+    .peaple_we_are a
+        font-size: 10px
+        line-height: 13px
+
+    .peaple_like 
+        gap: 5px
+
+        img
+            width: 12px
+
+        p
+            font-size: 10px
+            line-height: 13px
+
+    h1
+        font-size: 32px
+        line-height: 33px
+
+    h4
+        font-size: 11px
+        line-height: 14px
+
+@media screen and (max-width:590px)
+    .container
+        max-width: 560px
+
+    .header_content
+        gap: 20px
+        flex-wrap: wrap
+
+    .header_text
+        max-width: 256px
+
+
+
+
+
+
+
+
+
+
 
 .hot_auctions
     padding-top: 140px
 
-    .hot_auctions_content
-        .hot_auctions_title
-            @include dj
+.hot_auctions_title
+    @include dj
 
-            .button_view
-                display: flex
-                align-items: flex-end
+.button_view
+    display: flex
+    align-items: flex-end
 
-                a
-                    display: flex
-                    gap: 15px
-                    text-decoration: none
-                    transition: .3s
-                    padding: 0 15px
+    a
+        display: flex
+        gap: 15px
+        text-decoration: none
+        transition: .3s
+        padding: 0 15px
 
-                a:hover
-                    transition: .3s
-                    background-color: rgba(145, 137, 150, 0.4)
+    a:hover
+        transition: .3s
+        background-color: rgba(145, 137, 150, 0.4)
 
-    .hot_auctions_lists
-        @extend %action_list
+.hot_auctions_lists
+    @extend %action_list
 
-        li
-            max-width: 300px
-            width: 100%
+    li
+        max-width: 300px
+        width: 100%
 
-            img
-                border-radius: 10px
+        img
+            border-radius: 10px
             
-            .name_lots
-                @include dj
-                margin-top: 24px 
+.name_lots
+    @include dj
+    margin-top: 24px 
 
-                p
-                    @extend %font_16_and_line_24
-                    color: #FFFFFF
+    p
+        @extend %font_16_and_line_24
+        color: #FFFFFF
 
-            .time_bid
-                @include dj
-                align-items: center
+.time_bid
+    @include dj
+    align-items: center
 
-                p
-                    font-weight: 400
-                    font-size: 16px
-                    line-height: 24px
-                    /* identical to box height, or 150% */
-                    color: #BCBCBC
+    p
+        font-weight: 400
+        font-size: 16px
+        line-height: 24px
+        /* identical to box height, or 150% */
+        color: #BCBCBC
 
-                    span
-                        @extend %time_bid_span
+        span
+            @extend %time_bid_span
 
-                button
-                    @extend  %time_bid_button
+    button
+        @extend  %time_bid_button
 
-                    a
-                        @extend  %time_bid_a
+        a
+            @extend  %time_bid_a
 
-                    a:hover
-                        color: #FFF
+        a:hover
+            color: #FFF       
     
 .getting_started
     padding-top: 164px
@@ -348,55 +625,55 @@ h4
     background-repeat: no-repeat
     background-size: cover
 
-    .getting_started_content
+.getting_started_content
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    >p
+        font-weight: 400
+        font-size: 24px
+        line-height: 36px
+        /* identical to box height, or 150% */
+        letter-spacing: 0.5px
+        color: #E2E2E2
+        margin: 24px 0 80px 0
+        
+.getting_started_lists
+    display: flex
+    justify-content: space-evenly
+    flex-wrap: wrap
+    gap: 20px 0
+    list-style-type: none
+    width: 100%
+
+    li
+        max-width: 179px
+        width: 100%
         display: flex
         flex-direction: column
         align-items: center
+        gap: 24px
 
-        >p
-            font-weight: 400
-            font-size: 24px
-            line-height: 36px
-            /* identical to box height, or 150% */
-            letter-spacing: 0.5px
-            color: #E2E2E2
-            margin: 24px 0 80px 0
-        
-        .getting_started_lists
+        div
             display: flex
-            justify-content: space-evenly
-            flex-wrap: wrap
-            gap: 20px 0
-            list-style-type: none
-            width: 100%
+            justify-content: center
+            align-items: center
+            width: 150px
+            height: 138px
+            background: rgba(255, 255, 255, 0.095)
+            box-shadow: inset 2.01px -2.01px 20px rgba(214, 214, 214, 0.17), inset -3.01333px 3.01333px 3.01333px rgba(255, 255, 255, 0.39)
+            backdrop-filter: blur(74.4293px)
+            /* Note: backdrop-filter has minimal browser support */
+            border-radius: 26px
 
-            li
-                max-width: 179px
-                width: 100%
-                display: flex
-                flex-direction: column
-                align-items: center
-                gap: 24px
-
-                div
-                    display: flex
-                    justify-content: center
-                    align-items: center
-                    width: 150px
-                    height: 138px
-                    background: rgba(255, 255, 255, 0.095)
-                    box-shadow: inset 2.01px -2.01px 20px rgba(214, 214, 214, 0.17), inset -3.01333px 3.01333px 3.01333px rgba(255, 255, 255, 0.39)
-                    backdrop-filter: blur(74.4293px)
-                    /* Note: backdrop-filter has minimal browser support */
-                    border-radius: 26px
-
-                p
-                    font-weight: 400
-                    font-size: 16px
-                    line-height: 24px
-                    /* or 150% */
-                    text-align: center
-                    color: #FFFFFF
+        p
+            font-weight: 400
+            font-size: 16px
+            line-height: 24px
+            /* or 150% */
+            text-align: center
+            color: #FFFFFF
 
 .discover
     padding-top: 160px
@@ -404,108 +681,107 @@ h4
     h3
         color: #fff
 
-    .discover_filter
-        @include dj 
-        align-items: center
+.discover_filter
+    @include dj 
+    align-items: center
 
-        .discover_filter_menu
-            display: flex
-            gap: 41px
+.discover_filter_menu
+    display: flex
+    gap: 41px
 
-            a
-                display: flex
-                align-items: center
-                gap: 8px
-                text-decoration: none
-
-            button
-                display: flex
-                background: linear-gradient(93.51deg, #9B51E0 2.84%, #3081ED 99.18%)
-                border-radius: 10px
-                border: none
-
-                a
-                    padding: 6px 41px
-                    border-radius: 10px
-
-
-                a:hover
-                    padding: 4px 40px
-                    border: 1px solid #D7D7D7
-
-
-            button:hover
-                background: none
-
-    .discover_lists
-        @extend %action_list
-        margin-top: 87px
-
-        li
-            max-width: 300px
-            width: 100%
-
-            img
-                border-radius: 10px
-            
-            .name_lots
-                @include dj
-                margin-top: 24px 
-
-                p
-                    @extend %font_16_and_line_24
-                    color: #FFFFFF
-
-            .time_buy_and_bid
-                @include dj
-                align-items: center
-
-                p
-                    font-weight: 400
-                    @extend %font_16_and_line_24
-                    color: #BCBCBC
-
-                    span
-                        @extend %time_bid_span
-
-                button
-                    @extend %time_bid_button
-
-                    a
-                        @extend %time_bid_a
-
-                    a:hover
-                        color: #FFF
-    .load_more
-        margin-top: 81px
+    a
         display: flex
-        justify-content: center
         align-items: center
+        gap: 8px
+        text-decoration: none
 
-        .load_more_button
-            display: flex
-            background: none
+    button
+        display: flex
+        background: linear-gradient(93.51deg, #9B51E0 2.84%, #3081ED 99.18%)
+        border-radius: 10px
+        border: none
+
+        a
+            padding: 6px 41px
             border-radius: 10px
-            border: none
 
-            a
-                font-weight: 500
-                font-size: 12px
-                line-height: 22px
-                /* identical to box height, or 183% */
-                letter-spacing: 1.5px
-                text-transform: uppercase
-                color: #BCBCBC
-                text-decoration: none
-                padding: 12px 40px
-                border: 1px solid #D7D7D7
-                border-radius: 10px
-                transition: .3s
+        a:hover
+            padding: 4px 40px
+            border: 1px solid #D7D7D7
 
-            a:hover
-                color: #FFF
-                border: 1px solid #FFF
-                transition: .3s
+    button:hover
+        background: none
+
+.discover_lists
+    @extend %action_list
+    margin-top: 87px
+
+    li
+        max-width: 300px
+        width: 100%
+
+        img
+            border-radius: 10px
+        
+.name_lots
+    @include dj
+    margin-top: 24px 
+
+    p
+        @extend %font_16_and_line_24
+        color: #FFFFFF
+
+.time_buy_and_bid
+    @include dj
+    align-items: center
+
+    p
+        font-weight: 400
+        @extend %font_16_and_line_24
+        color: #BCBCBC
+
+        span
+            @extend %time_bid_span
+
+    button
+        @extend %time_bid_button
+
+        a
+            @extend %time_bid_a
+
+        a:hover
+            color: #FFF
+
+.load_more
+    margin-top: 81px
+    display: flex
+    justify-content: center
+    align-items: center
+
+.load_more_button
+    display: flex
+    background: none
+    border-radius: 10px
+    border: none
+
+    a
+        font-weight: 500
+        font-size: 12px
+        line-height: 22px
+        /* identical to box height, or 183% */
+        letter-spacing: 1.5px
+        text-transform: uppercase
+        color: #BCBCBC
+        text-decoration: none
+        padding: 12px 40px
+        border: 1px solid #D7D7D7
+        border-radius: 10px
+        transition: .3s
+
+    a:hover
+        color: #FFF
+        border: 1px solid #FFF
+        transition: .3s
 
 footer
     padding: 160px 0 98px 0
@@ -517,58 +793,63 @@ footer
         color: #FFFFFF
         max-width: 440px
 
-    .footer_content
-        @include dj
+.footer_content
+    @include dj
 
-        >ul
-            display: flex
-            list-style-type: none
-            flex-wrap: wrap
-            gap: 41px
+    >ul
+        display: flex
+        list-style-type: none
+        flex-wrap: wrap
+        gap: 41px
 
-            h2
-                font-weight: 400
-
-            li
-                display: flex
-                flex-direction: column
-
-                .links
-                    margin-top: 40px 
-                    display: flex
-                    gap: 32px
-                    flex-direction: column
-                    list-style-type: none
-
-                    a
-                        font-weight: 400
-                        font-size: 24px
-                        line-height: 36px
-                        /* identical to box height */
-                        letter-spacing: 0.03em
-                        color: #D7D7D7
-                        text-decoration: none
-    
-    .line
-        margin: 40px 0
-
-    .copyright
-        @include dj
-
-        h3
+        h2
             font-weight: 400
-            font-size: 24px
-            line-height: 36px
-            /* identical to box height */
-            /* Gray 3 */
-            color: #828282
 
-        .copyright_contact
+        li
             display: flex
-            gap: 25px
-            align-items: center
+            flex-direction: column
 
-            a
-                display: flex
-                align-items: center
-                justify-content: center
+.links
+    margin-top: 40px 
+    display: flex
+    gap: 20px
+    flex-direction: column
+    list-style-type: none
+
+    a
+        padding: 6px 0
+        font-weight: 400
+        font-size: 24px
+        line-height: 36px
+        /* identical to box height */
+        letter-spacing: 0.03em
+        color: #D7D7D7
+        text-decoration: none
+        transition: .3s
+
+    a:hover
+        background-color: rgba(185, 167, 167, 0.4)
+    
+.line
+    margin: 40px 0
+
+.copyright
+    @include dj
+
+    h3
+        font-weight: 400
+        font-size: 24px
+        line-height: 36px
+        /* identical to box height */
+        /* Gray 3 */
+        color: #828282
+
+.copyright_contact
+    display: flex
+    gap: 25px
+    align-items: center
+
+    a
+        display: flex
+        align-items: center
+        justify-content: center
