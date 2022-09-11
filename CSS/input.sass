@@ -325,10 +325,14 @@ h4
             font-size: 18px
             line-height: 28px
 
-    .header_text_button a
-        font-size: 21px
-        line-height: 32px
-        padding: 10px 50px
+    .header_text_button 
+        a
+            font-size: 21px
+            line-height: 32px
+            padding: 10px 50px
+
+        a:hover
+            padding: 11px 51px 
 
     .header_link_content
         padding: 22px 18px
@@ -370,6 +374,9 @@ h4
             font-size: 17px
             line-height: 25px
             padding: 8px 38px
+
+        a:hover
+            padding: 9px 39px 
 
     .header_link_content
         padding: 16px 14px
@@ -419,6 +426,9 @@ h4
             line-height: 18px
             padding: 6px 27px
 
+        a:hover
+            padding: 7px 28px 
+
     .header_link_content
         padding: 16px 14px
 
@@ -444,7 +454,7 @@ h4
             width: 16px
 
         p
-            font-size: 11px
+            font-size: 10px
             line-height: 16px
 
     h1
@@ -483,7 +493,7 @@ h4
         max-width: 285px
 
         p
-            font-size: 13px
+            font-size: 12px
             line-height: 16px
             margin: 10px 0 14px 0
 
@@ -494,6 +504,9 @@ h4
             font-size: 14px
             line-height: 16px
             padding: 7px 24px
+
+        a:hover
+            padding: 8px 25px 
 
     .header_link_content
         padding: 11px 10px
@@ -530,7 +543,7 @@ h4
 
     h1
         font-size: 32px
-        line-height: 33px
+        line-height: 34px
 
     h4
         font-size: 11px
@@ -584,7 +597,7 @@ h4
 
     .peaple_text p 
         font-size: 10px
-        line-height: 10px
+        line-height: 12px
 
     .peaple_we_are a 
         font-size: 13px
@@ -592,11 +605,11 @@ h4
 
     .peaple_like p 
         font-size: 11px
-        line-height: 10px
+        line-height: 12px
 
 @media screen and (max-width:490px)
     .container 
-        max-width: 320px
+        max-width: 360px
 
     .header_menu nav 
         gap: 0
@@ -609,58 +622,58 @@ h4
         gap: 30px
 
     .header_text 
-        max-width: 250px
+        max-width: 350px
 
         p 
             font-size: 10px
             margin: 9px 0 12px 0
 
-    .header_text_button a 
-        font-size: 10px
-        line-height: 12px
-        padding: 6px 20px
+    .header_text_button 
+        a 
+            font-size: 11px
+            line-height: 14px
+            padding: 6px 24px
+
+        a:hover
+            padding: 7px 25px 
 
     .header_link_content
-        padding: 11px 10px
+        padding: 16px 14px
 
         >img
-            max-width: 210px
+            max-width: 250px
 
     .link_content_peaple
-        margin-top: 4px 
+        margin-top: 14px 
 
-    .peaple_content 
-        gap: 6px
-
-        img
-            width: 30px
+    .peaple_content img
+        width: 40px
 
     .peaple_text p
-        font-size: 8px
-        line-height: 10px
+        font-size: 10px
+        line-height: 16px
 
     .peaple_we_are a
         font-size: 10px
-        line-height: 13px
+        line-height: 16px
 
     .peaple_like 
-        gap: 5px
-
         img
-            width: 12px
+            width: 16px
 
         p
             font-size: 10px
-            line-height: 13px
+            line-height: 16px
 
-    h1 
-        font-size: 24px
-        line-height: 26px
+    h1
+        font-size: 28px
+        line-height: 35px
 
     h4
         font-size: 11px
-        line-height: 14px
+        line-height: 16px
 
+    
 
 .hot_auctions
     padding-top: 140px
@@ -697,6 +710,9 @@ h4
     @include dj
     margin-top: 24px 
 
+    >p
+        font-weight: 600
+
     p
         @extend %font_16_and_line_24
         color: #FFFFFF
@@ -722,8 +738,84 @@ h4
             @extend  %time_bid_a
 
         a:hover
-            color: #FFF       
-    
+            color: #FFF    
+
+@media screen and (max-width:1366px)
+    .hot_auctions_lists 
+        li 
+            max-width: 250px
+
+        img 
+            width: 100%
+
+@media screen and (max-width:1230px)
+    .hot_auctions 
+        padding-top: 120px
+
+    h2
+        font-size: 44px
+        line-height: 55px
+
+@media screen and (max-width:1100px)
+    .button_view
+        a
+            img
+                width: 16px
+
+    h2
+        font-size: 36px
+        line-height: 40px
+
+    h3
+        font-size: 22px
+        line-height: 28px
+
+@media screen and (max-width:940px)
+    .hot_auctions 
+        padding-top: 60px
+
+    h2 
+        font-size: 32px
+        line-height: 34px
+
+@media screen and (max-width:740px)
+    .button_view a img 
+        width: 14px
+
+    .hot_auctions_lists
+        gap: 55px 10px
+
+        li
+            max-width: 230px
+
+    h2 
+        font-size: 28px
+        line-height: 30px
+
+    h3 
+        font-size: 18px
+        line-height: 20px
+
+@media screen and (max-width:590px)
+
+    .hot_auctions_lists 
+        gap: 40px 10px
+
+        li 
+            max-width: 190px
+
+    h2 
+        font-size: 26px
+
+@media screen and (max-width:490px)
+    .hot_auctions_lists li 
+        max-width: 165px
+
+    h2
+        font-size: 22px
+        line-height: 22px
+
+
 .getting_started
     padding-top: 164px
     background-image: url(../Img/font_getting_started.svg)
@@ -779,6 +871,66 @@ h4
             /* or 150% */
             text-align: center
             color: #FFFFFF
+
+@media screen and (max-width:1100px)
+    .getting_started_content > p 
+        font-size: 20px
+        line-height: 24px
+        margin: 20px 0 50px 0
+
+    .getting_started_lists li p 
+        font-size: 14px
+        line-height: 20px
+
+@media screen and (max-width:940px)
+    .getting_started 
+        padding-top: 110px
+
+    .getting_started_content > p 
+        font-size: 18px
+        line-height: 22px
+        margin: 16px 0 40px 0
+
+    .getting_started_lists 
+        max-width: 425px
+
+        li
+            gap: 12px
+
+            p 
+                font-size: 12px
+                line-height: 16px
+
+@media screen and (max-width:740px)
+    .getting_started
+        padding-top: 90px
+
+    .getting_started_content > p 
+        font-size: 14px
+        line-height: 16px
+
+@media screen and (max-width:590px)
+    .getting_started 
+        padding-top: 70px
+
+    .getting_started_content > p 
+        font-size: 12px
+        line-height: 14px
+
+    .getting_started_lists li p 
+        font-size: 10px
+        line-height: 14px
+
+@media screen and (max-width:490px)
+    .getting_started 
+        padding-top: 55px
+
+    .getting_started_content > p
+        text-align: center
+
+    .getting_started_lists li div 
+        width: 130px
+        height: 118px
 
 .discover
     padding-top: 160px
@@ -888,6 +1040,54 @@ h4
         border: 1px solid #FFF
         transition: .3s
 
+@media screen and (max-width:1366px)
+    
+
+    .name_lots
+        margin-top: 12px
+
+@media screen and (max-width:740px)
+
+    .name_lots
+        p
+            font-size: 14px
+            line-height: 16px
+
+    .time_bid 
+        p
+            font-size: 14px
+
+            span
+                font-size: 14px
+
+        button
+            a
+                padding: 2px 22px
+                font-size: 14px
+    
+
+@media screen and (max-width:590px)
+    .name_lots p 
+        font-size: 12px
+        line-height: 14px
+
+    .time_bid 
+        p
+            font-size: 12px
+
+            span
+                font-size: 12px
+
+        button
+            a
+                padding: 2px 18px
+                font-size: 12px
+                line-height: 18px
+
+
+
+
+
 footer
     padding: 160px 0 98px 0
 
@@ -958,3 +1158,22 @@ footer
         display: flex
         align-items: center
         justify-content: center
+
+@media screen and (max-width:1366px)
+    
+
+    .line 
+        margin: 20px 0
+
+@media screen and (max-width:740px)
+
+    .line
+        margin: 15px 0
+
+
+
+
+
+@media screen and (max-width:590px)
+    .line 
+        margin: 11px 0
