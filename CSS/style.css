@@ -557,14 +557,129 @@ h4 {
 }
 @media screen and (max-width: 590px) {
   .container {
-    max-width: 560px;
+    max-width: 450px;
+  }
+  .header_menu {
+    padding-top: 8px;
+  }
+  .header_menu a img {
+    width: 72px;
+  }
+  .header_menu nav {
+    gap: 90px;
+  }
+  .menu {
+    gap: 0 13px;
+    flex-wrap: wrap;
+    max-width: 164px;
+    justify-content: flex-start;
+  }
+  .profile_menu {
+    max-width: 75px;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .header_content {
-    gap: 20px;
+    gap: 40px;
     flex-wrap: wrap;
   }
   .header_text {
-    max-width: 256px;
+    max-width: 400px;
+  }
+  .header_text p {
+    font-size: 12px;
+    margin: 16px 0 17px 0;
+  }
+  .header_link_content > img {
+    max-width: 300px;
+  }
+  h4 {
+    font-size: 13px;
+    line-height: 22px;
+  }
+  .peaple_content img {
+    width: 40px;
+  }
+  .peaple_text p {
+    font-size: 10px;
+    line-height: 10px;
+  }
+  .peaple_we_are a {
+    font-size: 13px;
+    line-height: 22px;
+  }
+  .peaple_like p {
+    font-size: 11px;
+    line-height: 10px;
+  }
+}
+@media screen and (max-width: 490px) {
+  .container {
+    max-width: 320px;
+  }
+  .header_menu nav {
+    gap: 0;
+  }
+  .header_menu a img {
+    width: 60px;
+  }
+  .header_content {
+    margin-top: 10px;
+    gap: 30px;
+  }
+  .header_text {
+    max-width: 250px;
+  }
+  .header_text p {
+    font-size: 10px;
+    margin: 9px 0 12px 0;
+  }
+  .header_text_button a {
+    font-size: 10px;
+    line-height: 12px;
+    padding: 6px 20px;
+  }
+  .header_link_content {
+    padding: 11px 10px;
+  }
+  .header_link_content > img {
+    max-width: 210px;
+  }
+  .link_content_peaple {
+    margin-top: 4px;
+  }
+  .peaple_content {
+    gap: 6px;
+  }
+  .peaple_content img {
+    width: 30px;
+  }
+  .peaple_text p {
+    font-size: 8px;
+    line-height: 10px;
+  }
+  .peaple_we_are a {
+    font-size: 10px;
+    line-height: 13px;
+  }
+  .peaple_like {
+    gap: 5px;
+  }
+  .peaple_like img {
+    width: 12px;
+  }
+  .peaple_like p {
+    font-size: 10px;
+    line-height: 13px;
+  }
+  h1 {
+    font-size: 24px;
+    line-height: 26px;
+  }
+  h4 {
+    font-size: 11px;
+    line-height: 14px;
   }
 }
 .hot_auctions {
