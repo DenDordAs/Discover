@@ -180,6 +180,43 @@ h4 {
   border: 1px solid #FFF;
 }
 
+.burger {
+  transition: 0.3s;
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  width: 25px;
+  height: 16px;
+  z-index: 9999;
+}
+.burger div {
+  width: 25px;
+  height: 2px;
+  background-color: #fff;
+  transition: 0.3s;
+}
+
+.burger:hover {
+  transition: 0.3s;
+  cursor: pointer;
+}
+.burger:hover div:first-child {
+  transform: rotate(45deg);
+  position: relative;
+  top: 4px;
+  transition: 0.3s;
+}
+.burger:hover div:nth-child(2) {
+  display: none;
+  transition: 0.3s;
+}
+.burger:hover div:last-child {
+  transform: rotate(-45deg);
+  position: relative;
+  top: -3px;
+  transition: 0.3s;
+}
+
 .header_content {
   display: flex;
   justify-content: space-between;
@@ -241,6 +278,30 @@ h4 {
   box-sizing: border-box;
   border: 0.88px solid;
   border-image-source: linear-gradient(168.82deg, #FB37FF 1.7%, rgba(155, 111, 238, 0) 27.12%, rgba(123, 127, 234, 0) 61.28%, #1BB2DE 99.52%);
+  position: relative;
+}
+
+.circle {
+  width: 123px;
+  height: 123px;
+  border-radius: 100%;
+  position: absolute;
+}
+
+.circle_pink {
+  top: -86px;
+  left: -40px;
+  background: #FB37FF;
+  filter: blur(80px) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  z-index: -1;
+}
+
+.circle_blue {
+  bottom: -63px;
+  right: -17px;
+  background: #18B2DE;
+  filter: blur(80px) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  z-index: -1;
 }
 
 .header_link_content {
@@ -413,9 +474,22 @@ h4 {
     width: 85px;
   }
   .header_menu nav {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.75);
+    width: 100%;
+    top: 0;
+    right: 0;
+    flex-direction: column;
     gap: 35px;
+    padding: 5% 0;
+    transform: translateY(-100%);
+    transition: 0.3s;
   }
   .menu {
+    flex-direction: column;
     gap: 18px;
   }
   .menu a {
@@ -424,6 +498,13 @@ h4 {
   .profile_menu a {
     padding: 4px 20px;
     font-size: 10px;
+  }
+  .burger {
+    display: flex;
+  }
+  .burger:hover ~ .header_menu nav {
+    transform: translateY(0);
+    transition: 0.3s;
   }
   .header_content {
     margin-top: 50px;
@@ -832,7 +913,7 @@ h4 {
 }
 .getting_started {
   padding-top: 164px;
-  background-image: url(../Img/font_getting_started.svg);
+  background-image: url("../Img/font_getting_started.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }
