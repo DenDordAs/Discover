@@ -13,9 +13,34 @@
 </head>
 
 <body>
+    <div class="header_fixed">
+        <div class="header_menu">
+
+            <a href="#"><img src="Img/Gaslur.svg" alt="Error404"></a>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">My profile</a></li>
+                    <li><a href="#">activity</a></li>
+                    <li><a href="#">how it works</a></li>
+                </ul>
+                <div class="profile_menu">
+                    <button class="profile_menu_create"><a href="#">create</a></button>
+                    <button class="profile_menu_sign"><a href="#">sign in</a></button>
+                </div>
+            </nav>
+            <div class="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+        </div>
+    </div>
+    <button onclick="clickUp()" class="btn_up"></button>
     <header>
         <div class="container">
-            <div class="header_menu">
+            <!-- <div class="header_menu">
                 <a href="#"><img src="Img/Gaslur.svg" alt="Error404"></a>
                 <nav>
                     <ul class="menu">
@@ -34,7 +59,7 @@
                     <div></div>
                     <div></div>
                 </div>
-            </div>
+            </div> -->
             <div class="header_content">
                 <div class="header_text">
                     <h1>Discover, collect, and charity in extraordinary NFT marketplace</h1>
@@ -79,7 +104,9 @@
                     <div class="hot_auctions_title">
                         <h2>Hot auctions</h2>
                         <div class="button_view">
-                            <a href="#"><h3>View all</h3><img src="Img/view_all_button.svg" alt="Error404"></a>
+                            <a href="#">
+                                <h3>View all</h3><img src="Img/view_all_button.svg" alt="Error404">
+                            </a>
                         </div>
                     </div>
                     <ul class="hot_auctions_lists">
@@ -174,10 +201,18 @@
                 <div class="discover_filter">
                     <h2>Discover</h2>
                     <div class="discover_filter_menu">
-                        <a href="#"><img src="Img/sort-ascending.svg" alt="Error404"><h3>Category</h3></a>
-                        <a href="#"><h3>Cheapest</h3><img src="Img/cheveron-down.svg" alt="Error404"></a>
-                        <a href="#"><h3>Newest</h3><img src="Img/cheveron-down.svg" alt="Error404"></a>
-                        <button><a href="#"><img src="Img/filter.svg" alt="Error404"><h3>Filter</h3></a></button>
+                        <a href="#"><img src="Img/sort-ascending.svg" alt="Error404">
+                            <h3>Category</h3>
+                        </a>
+                        <a href="#">
+                            <h3>Cheapest</h3><img src="Img/cheveron-down.svg" alt="Error404">
+                        </a>
+                        <a href="#">
+                            <h3>Newest</h3><img src="Img/cheveron-down.svg" alt="Error404">
+                        </a>
+                        <button><a href="#"><img src="Img/filter.svg" alt="Error404">
+                                <h3>Filter</h3>
+                            </a></button>
                     </div>
                 </div>
                 <ul class="discover_lists">
@@ -327,6 +362,9 @@
             </div>
         </div>
     </footer>
+
+
+    <script src="script.js"></script>
 </body>
 
 </html>

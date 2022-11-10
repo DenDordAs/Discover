@@ -1,3 +1,54 @@
+
+
+.header_fixed{
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  transition: 1s;
+}
+
+.btn_up{
+  display: flex;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-color: #828282;
+  position: fixed;
+  z-index: 9998;
+  backdrop-filter: blur(10px);
+  bottom: 5%;
+  border: none;
+  left: 92%;
+  transform:translateX(+200%);
+  transition: 1.3s;
+  cursor: pointer;
+}
+
+.button_up{
+  transform:translateX(0);
+  transition: 1.3s;
+}
+
+.out{
+  transform: translateY(-100%);
+  transition: 1s;
+}
+
+.header_menu{
+  max-width: 1295px;
+  width: 100%;
+  padding: 10px 0;
+  margin: 0 auto; 
+}
+
+.header_menu >a{
+  display: flex;
+  align-items: center;
+}
+
 .discover_lists, .hot_auctions_lists {
   display: flex;
   justify-content: space-evenly;
@@ -99,7 +150,6 @@ h4 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 20px;
 }
 .header_menu > a {
   display: flex;
@@ -221,6 +271,15 @@ h4 {
   display: flex;
   justify-content: space-between;
   margin-top: 159px;
+  transform: translateY(-100%);
+  transition: 1s;
+  opacity: 0;
+}
+
+.header_content_view{
+  opacity: 1;
+  transition: 1s;
+  transform: translateY(0%);
 }
 
 .header_text {
