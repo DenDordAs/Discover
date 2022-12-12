@@ -100,6 +100,7 @@
 
 body {
   background-color: #1F1D2B;
+  overflow-x: hidden;
 }
 
 h1 {
