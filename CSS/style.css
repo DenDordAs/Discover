@@ -12,19 +12,25 @@
 
 .btn_up{
   display: flex;
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
-  background-color: #828282;
   position: fixed;
   z-index: 9998;
   backdrop-filter: blur(10px);
   bottom: 5%;
-  border: none;
   left: 92%;
   transform:translateX(+200%);
   transition: 1.3s;
   cursor: pointer;
+  border-radius: 100%;
+  border: none;
+}
+
+.btn_up img{
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-color: #828282;
+  border: none;
+  color: white;
 }
 
 .button_up{
@@ -143,8 +149,27 @@ h4 {
 }
 
 .container {
+  transform: translateX(0);
   max-width: 1295px;
   margin: 0 auto;
+}
+
+.container_hide_r{
+  transform: scale(0);
+  transition: .7s;
+  opacity: 0;
+}
+
+.container_hide_l{
+  transform: scale(0);
+  transition: .7s;
+  opacity: 0;
+}
+
+.container_show{
+  transform: scale(1);
+  transition: .7s;
+  opacity: 1;
 }
 
 .header_menu {

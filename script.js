@@ -25,15 +25,6 @@ window.addEventListener("scroll", () => {
         header_content.classList.remove("header_content_view")
     }
 
-    // for (let i = 0; i < containers.length; i++) {
-    //     let container = containers.slice(0, i)
-    //     containers.slice(0, i)
-    //     sum += container[i].clientHeight
-    //     if (scrollLet <= sum) {
-    //         containers[i].classList.add("header_content_view")
-    //     }
-    // }
-
     let containers = document.querySelectorAll(".container")
     let sum = 0
 
@@ -42,18 +33,24 @@ window.addEventListener("scroll", () => {
             sum += containers[i].clientHeight
             if (sum + 200 < scrollLet) {
                 if (i % 2 != 0) {
-                    containers[i].style.cssText = "transform: translateX(100%);transition: .7s;opacity: 0;"
+                    containers[i].classList.add('container_hide_r')
+                    containers[i].classList.remove('container_show')
                 } else {
-                    containers[i].style.cssText = "transform: translateX(-100%);transition: .7s;opacity: 0;"
+                    containers[i].classList.add('container_hide_l')
+                    containers[i].classList.remove('container_show')
                 }
             } else {
                 if (sum - 200 - containers[i].clientHeight < scrollLet) {
-                    containers[i].style.cssText = "transform: translateX(0%);transition: .7s;opacity: 1;"
+                    containers[i].classList.remove('container_hide_r')
+                    containers[i].classList.remove('container_hide_l')
+                    containers[i].classList.add('container_show')
                 } else {
                     if (i % 2 != 0) {
-                        containers[i].style.cssText = "transform: translateX(100%);transition: .7s;opacity: 0;"
+                        containers[i].classList.add('container_hide_r')
+                        containers[i].classList.remove('container_show')
                     } else {
-                        containers[i].style.cssText = "transform: translateX(-100%);transition: .7s;opacity: 0;"
+                        containers[i].classList.add('container_hide_l')
+                        containers[i].classList.remove('container_show')
                     }
                 }
             }
